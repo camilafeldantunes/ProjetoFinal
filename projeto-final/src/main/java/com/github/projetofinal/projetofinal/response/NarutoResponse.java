@@ -11,7 +11,7 @@ import java.util.ArrayList;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class NarutoResponse {
 
-    private int id;
+    private String id;
     private String name;
     private ArrayList<String> images;
     private Debut debut;
