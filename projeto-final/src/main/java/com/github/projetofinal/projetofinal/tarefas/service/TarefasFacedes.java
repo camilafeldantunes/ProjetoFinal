@@ -26,12 +26,12 @@ public class TarefasFacedes {
         return narutoResponse;
     }
 
-    // Recuperar Registro
+    // Pegar Registro pelo ID
     public NarutoResponse getById(Long tarefaId){
         return narutos.get(tarefaId);
     }
 
-    // Recuperar todos os registros
+    // Pegar todos os registros
     public List<NarutoResponse> getAll(){
         return new ArrayList<>(narutos.values());
 

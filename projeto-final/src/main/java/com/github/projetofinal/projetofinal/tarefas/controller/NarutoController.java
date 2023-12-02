@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping(value = "/narutos", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/narutos/character", produces = MediaType.APPLICATION_JSON_VALUE)
 public class NarutoController {
 
     @Autowired
@@ -37,6 +37,12 @@ public class NarutoController {
     public List<NarutoResponse> getAll(){
         return tarefasFacedes.getAll();
 
+    }
+
+    @GetMapping("/{tarefaId}")
+    @ResponseBody
+    public NarutoResponse getById(@PathVariable("tarefaId") Long tarefaId){
+        return tarefasFacedes.getById(tarefaId);
     }
 
     @DeleteMapping("/{tarefaId}")
