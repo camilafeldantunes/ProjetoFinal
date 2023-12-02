@@ -4,13 +4,12 @@ import com.github.projetofinal.projetofinal.tarefas.DTO.NarutoResponse;
 import com.github.projetofinal.projetofinal.tarefas.service.TarefasFacedes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
-@RequestMapping(value = "/narutos/character", produces = MediaType.APPLICATION_JSON_VALUE)
+@RestController
+@RequestMapping(value = "/api/character", produces = MediaType.APPLICATION_JSON_VALUE)
 public class NarutoController {
 
     @Autowired
